@@ -104,7 +104,7 @@ foreach ($dataunit as $du) {
                     <tr>
                         <td rowspan="<?= $jmlcountkuk ?>"><?= $No ?></td>
                         <td rowspan="<?= $jmlcountkuk ?>"><?= $de->elemen ?></td>
-                        <td><?= $de->urutan ?>.<?= $dk->urutan ?>. <?= $dk->kuk_aktif ?></td>
+                        <td><?= $de->urutan ?>.<?= $dk->urutan ?>. <?= $dk->kuk ?></td>
                         <td rowspan="<?= $jmlcountkuk ?>"><?php if ($dataia01) {
                                                                 echo $dataia01->sop;
                                                             } ?></td>
@@ -116,7 +116,7 @@ foreach ($dataunit as $du) {
                 } else {
                 ?>
                     <tr>
-                        <td><?= $de->urutan ?>.<?= $dk->urutan ?>. <?= $dk->kuk_aktif ?></td>
+                        <td><?= $de->urutan ?>.<?= $dk->urutan ?>. <?= $dk->kuk ?></td>
                         <td align="center"><input type="checkbox"></td>
                         <td align="center"><input type="checkbox"></td>
                         <td></td>

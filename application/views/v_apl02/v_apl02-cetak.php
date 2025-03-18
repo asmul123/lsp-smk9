@@ -33,7 +33,7 @@ $datakop = $this->M_Setting->getkop();
             <ul>
                 <li>Baca setiap pertanyaan di kolom sebelah kiri</li>
                 <li>Beri tanda centang (<input type="checkbox" disabled checked>) pada kotak jika Anda yakin dapat melakukan tugas yang dijelaskan.</li>
-                <li>Isi kolom di sebelah kanan dengan mendaftar bukti yang Anda miliki untuk menunjukkan bahwa Anda melakukan tugas-tugas ini.</li>
+                <li>Isi kolom di sebelah kanan dengan mendaftar bukti yang Anda miliki untuk menunjukkan bahwa Anda melakukan pekerjaan.</li>
             </ul>
             </p>
         </td>
@@ -47,10 +47,18 @@ $datakop = $this->M_Setting->getkop();
     ?>
         <table width="100%" border='1' cellpadding="4" cellspacing="0">
             <tr>
-                <td width="19%"><strong>Unit Kompetensi: <?= $No ?></strong></td>
-                <td colspan="4"><b><?= $du->judul_unit ?></b></td>
+                <td rowspan="2" width="20%"><strong>Unit Kompetensi <?= $No ?></strong></td>
+                <td width="20%">Kode Unit</td>
+                <td width="2%">:</td>
+                <td width="68%"colspan="2"><b><?= $du->kode_unit ?></b></td>
             </tr>
-
+            <tr>
+                <td>Judul Unit</td>
+                <td>:</td>
+                <td colspan="2"><b><?= $du->judul_unit ?></b></td>
+            </tr>
+        </table>
+        <table width="100%" border='1' cellpadding="4" cellspacing="0">
             <tr>
                 <td colspan="2"><b>Dapatkah Saya ............. ?</b></td>
                 <td width="3%" align="center"><b>K</b></td>
@@ -69,7 +77,7 @@ $datakop = $this->M_Setting->getkop();
                             $datakuk = $this->Mskema->getkuk($de->id);
                             foreach ($datakuk as $dk) {
                             ?>
-                                <?= $de->urutan ?>.<?= $dk->urutan ?>. <?= $dk->kuk_aktif ?><br>
+                                <?= $de->urutan ?>.<?= $dk->urutan ?>. <?= $dk->kuk ?><br>
                             <?php
                             }
                             ?>
